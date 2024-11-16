@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.913);
+    /* background-image: linear-gradient(to right top,rgb(206, 3, 206),rgb(170, 12, 170), rgb(31, 2, 31)); */
+    background: rgb(2, 0, 36);
+    background: linear-gradient(70deg, rgba(2, 0, 36, 1) 0%, rgba(2, 16, 51, 1) 6%, rgba(108, 9, 121, 1) 31%, rgba(80, 9, 121, 1) 58%, rgba(80, 9, 121, 1) 79%);
+}
+
+.upper-box {
+    margin-top: 5%;
+    width: 450px;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(2, 7, 58);
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 0% 1%;
+}
+.copy-btn{
+    border: none;
+    background-color: transparent;
+}
+.upper-box::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    line-height: 30px;
+    color: yellow ;
+}
+
+
+.active {
+    background-color: fuchsia;
+    color: rgb(255, 200, 0);
+    position: absolute;
+    top: 22%;
+    right: 34%;
+    padding: 0.1rem 0.4rem;
+    border-radius: 10%;
+}
+.lower-box {
+    padding: 1rem 2rem;
+    color: white;
+    width: 450px;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgb(2, 7, 58);
+    border-radius: 10px;
+    gap: 20px;
+}
+
+
+.password-display {
+    background-color: transparent;
+    border: 10px;
+    color: rgb(213, 208, 208);
+}
+
+.password-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-section p{
+    font-size: 1.2rem;
+    color: yellow;
+}
+
+.Range-bar {
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: rgb(176, 6, 198);
+    border-radius: 10px;
+    z-index:1;
+}
+.Range-bar:active{
+    outline: 2px solid yellow;
+    z-index:1;
+
+}
+.Range-bar::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow:0px 0px 10px  yellow ;
+    z-index: 2;
+
+}
+.Range-bar::-webkit-slider-thumb:hover{
+    border: 1.1px solid yellow;
+    background-color: #000;
+    box-shadow:0px 0px 20px  yellow ;
+    z-index: 2;
+}
+
+.choose-section { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+.choose-section div{
+    display: flex;
+    gap: 20px;
+}
+.choose-section input{
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 1px solid rgba(34,193,195,1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.choose-section input:checked{
+  background-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/checkmark.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+.strength {
+    width: 100%;
+    padding: 1% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.strength-indicator {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: grey;
+    box-shadow: 0px 0px 10px grey;
+
+}
+
+.btn-generator {
+    padding: 2% 2%;
+    background-color: rgb(34, 254, 0);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px rgb(0, 97, 254);
+    width: 100%;
+}
+
+.btn-generator:active {
+    transition: all 0.025s linear;
+    box-shadow: 0px 0px rgb(0, 97, 254);
+    transform: scaleY(1.1);
+}
+
+
+@media screen and (max-width:600px) {
+    .upper-box , .lower-box {
+        width: 75%;
+    }
+    .choose_section_inputText{
+       font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .choose_section_inputText{
+       font-size: 0.9rem;
+    }
+}
